@@ -11,8 +11,7 @@ function RoomList(){
     const roomList = rooms.data;
     const [currentPage, setCurrentPage] = useState(1);
 
-    console.log(rooms);
-    console.log(roomList);
+
 
     useEffect(
         () => {
@@ -40,7 +39,7 @@ function RoomList(){
                     Array.isArray(roomList)
                     && roomList.map((room) => (<Room key={ room.roomNo } room={ room }/>))
                 }
-            </div>
+                
             <div className={ RoomListCSS.roomPgs }>
                 {
                     Array.isArray(roomList) &&
@@ -74,7 +73,7 @@ function RoomList(){
                         &gt;
                     </button>
                 }
-                
+                </div>
             </div>
             
         </>

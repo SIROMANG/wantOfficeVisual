@@ -1,8 +1,7 @@
-.roomDiv{
-    display: flex;
-    flex-wrap: wrap;
-    width: 850px;
-    height: 100%;
+.roomListDiv{
+
+    float: left;
+    width: 118vh;
     margin: 10px;
 }
 
@@ -19,6 +18,5 @@
 }
 
 .roomPgs{
-     list-style-type: 'none';
-     display: 'flex';
+    text-align: center;
 }

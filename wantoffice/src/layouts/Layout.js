@@ -3,7 +3,7 @@ import Header from "../components/common/Header";
 import Navbar from "../components/common/Navbar";
 // import LayoutCSS from "./Layout.module.css"
 
-function Layout() {
+function RoomLayout() {
 
     return (
         <>
@@ -18,4 +18,4 @@ function Layout() {
     );
 }
 
-export default Layout;
+export default RoomLayout;

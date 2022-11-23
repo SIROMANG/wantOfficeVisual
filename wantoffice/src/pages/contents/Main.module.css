@@ -1,38 +1,3 @@
-.HeaderDiv {
-    float: left;
-    border-bottom: 1px solid  #C6C6C6;
-    width: 85%;
-    margin-left: 20px;
-    text-decoration: none;
- }
-
- .HeaderDiv > ul > li {
-    
-    float: left;
-    padding-right: 50px;
-    padding-top: 20px;
-    color: #8D8D8D;
-
- }
-
- .SubmenuDiv{
-    float:left;
-    width: 200px;
-    padding-top: 100px;
-    color: #8D8D8D;
-    text-align: center;
-    list-style:none;
- }
-
- .SubmenuDiv h2{
-    padding-bottom: 16px;
- }
-
- .SubmenuDiv ul li{
-
-    color: #5a5a5a;
- }
-
 .ContentDiv {
     float:left;
     background-color: aquamarine;

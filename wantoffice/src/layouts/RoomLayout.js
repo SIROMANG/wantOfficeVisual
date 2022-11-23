@@ -1,15 +1,14 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/common/Header";
+import RoomHeader from "../components/common/Room/RoomHeader";
 import Navbar from "../components/common/Navbar";
-// import CalendarLayoutCSS from "./CalendarLayout.module.css"
-
-function CalendarLayout() {
+function RoomLayout() {
 
     return (
         <>
             
+            
             <Navbar />
-            <Header /> 
+            <RoomHeader />
             <main>
                 <Outlet />
              </main>
@@ -17,4 +16,4 @@ function CalendarLayout() {
     );
 }
 
-export default CalendarLayout;
+export default RoomLayout;

@@ -2,12 +2,12 @@ import RoomCSS from "./Room.module.css";
 import { useNavigate } from 'react-router-dom';
 
 
-function Room({ room : {roomNo, roomName, roomLocation, roomCapacity, roomFileName, roomImage} }){
+function Room({ room : {roomNo, roomName, roomLocation, roomCapacity, roomFileUrl, roomImage} }){
 
     const navigate = useNavigate();
 
     const onClickRoomHandler = (roomNo) => {
-        navigate(`/api/room/rooms${roomNo}`, { replace : true });
+        navigate(`/api/room/room${roomNo}`, { replace : false });
     }
 
     return(
@@ -17,7 +17,6 @@ function Room({ room : {roomNo, roomName, roomLocation, roomCapacity, roomFileNa
         >
             <img src={ roomImage } alt="예시"/>
             <h6>{ roomName }</h6>
-            <h6>{ roomLocation }</h6>
         </div>
     );
 
