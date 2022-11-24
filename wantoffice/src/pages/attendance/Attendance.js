@@ -32,6 +32,7 @@ function Attendance() {
                 {
                     <button className={ AttendanceCSS.InOutButton }
                         onClick={ onClickInHandler }
+                        disabled={ attendance.attIn != null }
                     >
                         출근하기
                     </button>
@@ -39,12 +40,13 @@ function Attendance() {
                 {
                     <button className={ AttendanceCSS.InOutButton }
                         onClick={ onClickOutHandler }
+                        disabled={ attendance.attIn == null || attendance.attOut != null }
                     >
                         퇴근하기
                     </button>
                 }
             </div>
-            <h3>{ attendance.attIn }</h3>
+            <h3>{ attendance.attIn || ''}</h3>
             <h3>{ attendance.attOut || '' }</h3>
         </>
     );

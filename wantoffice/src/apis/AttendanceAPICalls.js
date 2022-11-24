@@ -1,4 +1,4 @@
-import { POST_IN, GET_IN_OUT, POST_OUT } from "../modules/AttendanceModule";
+import { POST_IN, GET_IN_OUT, POST_OUT, GET_MY } from "../modules/AttendanceModule";
 
 export const callInRegistAPI = () => {
 
@@ -67,6 +67,31 @@ export const callOutRegistAPI = () => {
         if(result.status === 200) {
             console.log('[AttendanceAPICalls] callOutRegistAPI result : ', result);
             dispatch({ type: POST_OUT, payload: result.data });
+        }
+
+    }
+
+}
+
+export const callMyAttListAPI = ({year, month}) => {
+
+    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:8001/api/attendance/my?year=${year}&month=${month}`;
+
+    return async (dispatch, getState) => {
+
+        const result = await fetch(requestURL, {
+            method : "GET",
+            headers : {
+                "Content-Type" : "application/json",
+                "Accept" : "*/*",
+                "Authorization" : "Bearer " + window.localStorage.getItem('accessToken')
+            }
+        })
+        .then(response => response.json());
+
+        if(result.status === 200) {
+            console.log('[AttendanceAPICalls] callMyAttListAPI result : ', result);
+            dispatch({ type: GET_MY, payload: result.data });
         }
 
     }
